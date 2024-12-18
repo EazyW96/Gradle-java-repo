@@ -1,0 +1,44 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+application {
+    // Default program to run
+    mainClass = 'org.example.Chapter01.Welcome'
+}
+
+tasks.register('runWelcomeWithThreeMessages', JavaExec) {
+    group = 'application'
+    description = 'Run WelcomeWithThreeMessages program'
+    main = 'org.example.Chapter01.WelcomeWithThreeMessages'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runComputeExpression', JavaExec) {
+    group = 'application'
+    description = 'Run ComputeExpression program'
+    main = 'org.example.Chapter01.ComputeExpression'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runComputeArea', JavaExec) {
+    group = 'application'
+    description = 'Run ComputeArea program'
+    main = 'org.example.Chapter02.ComputeArea'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
