@@ -37,6 +37,14 @@ tasks.register('runComputeArea', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+tasks.register('runExercise_01_01', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_01 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_01'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+
 
 
 test {
