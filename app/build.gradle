@@ -9,11 +9,20 @@ repositories {
 dependencies {
     // JUnit 5 for testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    // Spark Java for serving static files
+    implementation 'com.sparkjava:spark-core:2.9.4'
+
+    // SLF4J Simple for logging
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+
+    // Gson for JSON conversion
+    implementation 'com.google.code.gson:gson:2.10'
 }
 
 application {
-    // Default program to run
-    mainClass = 'org.example.Chapter01.Welcome'
+    // Default program to run (WebApp serves the front-end)
+    mainClass = 'org.example.WebApp'
 }
 
 tasks.register('runWelcomeWithThreeMessages', JavaExec) {
@@ -44,8 +53,12 @@ tasks.register('runExercise_01_01', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
-
-
+tasks.register('runWebApp', JavaExec) {
+    group = 'application'
+    description = 'Run WebApp to serve the front-end'
+    main = 'org.example.WebApp'
+    classpath = sourceSets.main.runtimeClasspath
+}
 
 test {
     useJUnitPlatform()

@@ -1,4 +1,6 @@
 package org.example.Chapter01.exercises;
+/* (Display Three messages) Write a program that displays Welcome to Java,
+    Welcome to Computer Science, and Programming is fun.*/
 
 public class Exercise_01_01 {
     public static void main(String[] args) {
