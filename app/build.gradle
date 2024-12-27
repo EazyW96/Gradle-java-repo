@@ -53,6 +53,41 @@ tasks.register('runExercise_01_01', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+tasks.register('runExercise_01_02', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_02 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_02'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runExercise_01_03', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_03 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_03'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runExercise_01_04', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_04 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_04'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runExercise_01_05', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_05 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_05'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.register('runExercise_01_06', JavaExec) {
+    group = 'application'
+    description = 'Run Exercise_01_06 program for Chapter01'
+    main = 'org.example.Chapter01.exercises.Exercise_01_06'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 tasks.register('runWebApp', JavaExec) {
     group = 'application'
     description = 'Run WebApp to serve the front-end'
